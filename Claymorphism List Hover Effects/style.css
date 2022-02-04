@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #2f363e;
+}
+
+.container {
+  position: relative;
+  width: 350px;
+  min-height: 500px;
+  background: #2f363e;
+  border-radius: 30px;
+  padding: 50px;
+  /* x , y , blur-radius , color */
+  box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.25),
+    10px 10px 70px rgba(0, 0, 0, 0.25), inset 5px 5px 10px rgba(0, 0, 0, 0.5),
+    inset 5px 5px 20px rgba(255, 255, 255, 0.2),
+    inset -5px -5px 15px rgba(0, 0, 0, 0.75);
+}
+
+.container h3 {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.2em;
+}
+
+.container .list {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  cursor: pointer;
+}
+
+.container .list::before {
+  /* content: 는 html를 사용하지 않고도 CSS에서 내용을 생성하는 역할 */
+  /* :before, :after 가상 요소와 함께 쓰인다. */
+  content: "";
+  /* .container .list에 포지션을 상대적으로 설정해줘서 */
+  /* abs가 필요하면, 다시 설정해줘야 함 */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 45px;
+  height: 45px;
+  background: #1f83f2;
+  border-radius: 22.5px;
+  box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.25),
+    inset -3px -3px 5px rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+}
+
+.container .list:hover::before {
+  width: 100%;
+}
+
+.container .list .rank {
+  /* 현재 위치를 기준으로 상대적으로 이동한다. */
+  /* abs는 부모 태그를 기준으로 움직인다 */
+  position: relative;
+  min-width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* 특정 요소의 앞(::before)이나 뒤(::after)에 지정한 내용(텍스트 또는 이미지)을 추가할 수 있습니다. */
+.container .list .rank::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: #2f363e;
+  border-radius: 30px;
+  transform: scale(0);
+  transition: 0.5s;
+}
+
+/* 변형된 요소의 변경 되기 전 모습과 변경된 후 마지막 모습의 변화 과정을 자연스럽게 애니메이션 시켜주는 것이 transition */
+/* transform:scale(2) 의 숫자 2의 의미는 스케일을 2배로 한다는 의미 */
+.container .list:hover .rank::before {
+  /* hover 효과가 생기면, 랭크에 원 색깔이 변하게끔 */
+  /* :before 이기 때문에 앞에 색깔이 생성됨 */
+  transform: scale(1);
+}
+
+.container .list .rank span {
+  position: relative;
+  font-weight: 600;
+  font-size: 1em;
+  color: #fff;
+  transition: 0.5s;
+}
+
+.container .list .creator {
+  /* hover 효과시, 내용물이 투영되게 하려면 relative로 설정 */
+  position: relative;
+  line-height: 1.15em;
+}
+
+.container .list .creator h4 {
+  font-weight: 600;
+  color: #bcbcc0;
+  transition: 0.5s;
+}
+
+.container .list .creator p {
+  font-weight: 400;
+  color: #95999d;
+  font-size: 0.85em;
+  transition: 0.5s;
+}
+
+.container .list:hover .creator h4,
+.container .list:hover .creator p {
+  color: #fff;
+}
