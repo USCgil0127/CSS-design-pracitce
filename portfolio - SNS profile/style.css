@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f7f9fc;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  margin-bottom: 10px;
+}
+.top3_innerbox {
+  margin: 30px;
+}
+
+.top {
+  background-color: white;
+  margin: 50px;
+  padding: 30px;
+}
+
+.top img {
+  margin-top: 24px;
+}
+
+.top1 .card {
+  height: 100%;
+  border: none;
+}
+
+.top1 .card-body {
+  margin-top: 14px;
+}
+
+.top1 .card-title {
+  margin-bottom: -1px;
+}
+.top1 .card-text {
+  margin-bottom: 3px;
+}
+
+.top1 button {
+  padding: 10px 30px;
+  margin-top: 5px;
+}
+
+.top3 {
+  border-left: solid 1px skyblue;
+  vertical-align: middle;
+  padding-left: 40px;
+}
+
+.hr {
+  padding-left: 60px;
+  padding-right: 60px;
+  margin-bottom: 12px;
+}
+
+.middle-btn {
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 1.2rem;
+  color: skyblue;
+  margin-bottom: -19px;
+  text-align: right;
+  background-color: #f7f9fc;
+  border-style: none;
+  border-bottom: solid 5px skyblue;
+}
+
+.bottom {
+  margin-left: 52px;
+  margin-right: 52px;
+}
+
+.size1 {
+  /* padding-bottom: 3rem; */
+  height: 25rem;
+  padding: 20px;
+}
+
+.second-bottom-blank {
+  padding: 30px;
+}
+
+.second-card {
+  height: 36rem;
+}
+
+.third-card {
+  text-align: center;
+  padding: 30px;
+}
+
+.third-card i {
+  color: #6fbaf8;
+  font-size: 8rem;
+}
+.third-card a {
+  margin-top: 5px;
+  background-color: #6fbaf8;
+  border-style: none;
+  padding: 10px 50px;
+}
+.third-btn-comment {
+  margin-top: 3px;
+  color: #6fbaf8;
+}
+
+.skills {
+  padding-top: 5px;
+  padding-bottom: 10rem;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.skills .badge {
+  padding: 0.8rem;
+  border: solid 1px skyblue;
+}
+
+.pp-title {
+  margin-top: 1.5rem;
+  text-align: left;
+}
+
+.cards {
+  margin-bottom: -20px;
+}
+
+.cards img {
+  margin-top: 10px;
+}
+
+.cards p.card-text {
+  margin-bottom: 0px;
+}
