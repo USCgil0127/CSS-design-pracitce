@@ -52,6 +52,7 @@ main {
   display: flex;
   justify-content: center;
   align-content: center;
+  box-shadow: 2px 2px 2px 2px lightgray;
 }
 
 .card-left {
@@ -95,6 +96,7 @@ main {
 .chart {
   grid-area: 차트;
   background-color: white;
+  box-shadow: 2px 2px 2px 2px lightgray;
 }
 
 .chart h3 {
@@ -107,16 +109,44 @@ main {
 .tasks {
   grid-area: 테스크;
   background-color: white;
+  box-shadow: 2px 2px 2px 2px lightgray;
+}
+
+.task-container {
+  width: 100%;
+  height: 100%;
+}
+
+.task-container h3 {
+  padding-left: 5%;
+  background-color: rgba(211, 211, 211, 0.257);
+  margin: 0;
+  padding-top: 4%;
+  padding-bottom: 5%;
+  height: 25%;
+  font-size: 1.5rem;
 }
 
 .tasks-contents {
   display: flex;
   justify-content: space-between;
+  padding-left: 5%;
+  padding-right: 5%;
+  height: 25%;
+  font-size: 1.5rem;
 }
 
-.tasks > h3, .tasks-contents {
-  height: 15%;
+.task-line {
+  border-bottom: 2px solid grey;
 }
+
+.task-number {
+  background-color: blue;
+  border-radius: 20%;
+  color: white;
+  padding: 0% 3%;
+}
+
 
 .empty {
   grid-area: 빈공간;
@@ -133,8 +163,4 @@ h1 {
   grid-template-rows: 7% 18.8% 34.1% 34.1%;
   grid-gap: 2%;
   grid-template-areas: "타이틀 타이틀 타이틀 타이틀 타이틀 타이틀 타이틀 타이틀" "카드1 카드1 카드2 카드2 카드3 카드3 카드4 카드4" "차트 차트 차트 차트 차트 테스크 테스크 테스크" "차트 차트 차트 차트 차트 빈공간 빈공간 빈공간";
-}
-
-.grid-container > div {
-  border: 5px solid black;
 }/*# sourceMappingURL=style.css.map */
