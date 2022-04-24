@@ -1,0 +1,140 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: rgba(211, 211, 211, 0.257);
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+
+header {
+  width: 96%;
+  height: 8%;
+  border: 5px solid blue;
+  float: right;
+  background-color: white;
+}
+
+nav {
+  float: left;
+  width: 4%;
+  height: 100vh;
+  border: 5px solid green;
+  padding: 0;
+  margin: 0;
+  background-color: blue;
+}
+
+main {
+  margin-right: 1%;
+  float: right;
+  width: 94%;
+  height: 92%;
+}
+
+.title {
+  grid-area: 타이틀;
+}
+
+.card1,
+.card2,
+.card3,
+.card4 {
+  border-radius: 5%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.card-left {
+  flex-grow: 3;
+  padding: 8% 7%;
+}
+
+.card-left > p {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.card-left > h3 {
+  font-size: 20px;
+  color: gray;
+}
+
+.card-right {
+  flex-grow: 1;
+  font-size: 3.1rem;
+  color: gray;
+  padding: 16.2% 0%;
+}
+
+.card1 {
+  grid-area: 카드1;
+}
+
+.card2 {
+  grid-area: 카드2;
+}
+
+.card3 {
+  grid-area: 카드3;
+}
+
+.card4 {
+  grid-area: 카드4;
+}
+
+.chart {
+  grid-area: 차트;
+  background-color: white;
+}
+
+.chart h3 {
+  background-color: rgba(211, 211, 211, 0.257);
+  padding: 2%;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.tasks {
+  grid-area: 테스크;
+  background-color: white;
+}
+
+.tasks-contents {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tasks > h3, .tasks-contents {
+  height: 15%;
+}
+
+.empty {
+  grid-area: 빈공간;
+}
+
+h1 {
+  font-size: 35px;
+}
+
+.grid-container {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 7% 18.8% 34.1% 34.1%;
+  grid-gap: 2%;
+  grid-template-areas: "타이틀 타이틀 타이틀 타이틀 타이틀 타이틀 타이틀 타이틀" "카드1 카드1 카드2 카드2 카드3 카드3 카드4 카드4" "차트 차트 차트 차트 차트 테스크 테스크 테스크" "차트 차트 차트 차트 차트 빈공간 빈공간 빈공간";
+}
+
+.grid-container > div {
+  border: 5px solid black;
+}/*# sourceMappingURL=style.css.map */
