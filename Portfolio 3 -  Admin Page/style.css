@@ -41,6 +41,8 @@ main {
 
 .title {
   grid-area: 타이틀;
+  font-size: 35px;
+  margin: 0;
 }
 
 .card1,
@@ -50,14 +52,18 @@ main {
   border-radius: 5%;
   background-color: white;
   display: flex;
-  justify-content: center;
-  align-content: center;
+  /* justify-content: center; */
+  /* align-content: flex-end; */
+  /* padding-right: 3%; */
+  /* padding-left: 3%; */
+  padding: 1% 5%;
   box-shadow: 2px 2px 2px 2px lightgray;
 }
 
 .card-left {
   flex-grow: 3;
-  padding: 8% 7%;
+  /* padding: 8% 7%; */
+  /* 이렇게 미니까 반응형 일시, 자꾸 밑으로 밀린다. */
 }
 
 .card-left > p {
@@ -74,11 +80,17 @@ main {
   flex-grow: 1;
   font-size: 3.1rem;
   color: gray;
-  padding: 16.2% 0%;
+  /* padding: 16.2% 0%; */
 }
 
 .card1 {
   grid-area: 카드1;
+}
+
+.card-itag {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
 }
 
 .card2 {
@@ -145,15 +157,17 @@ main {
   border-radius: 20%;
   color: white;
   padding: 0% 3%;
+  display: flex;
+  align-items: center;
 }
 
+.task-number p {
+  margin: 0;
+  padding: 0;
+}
 
 .empty {
   grid-area: 빈공간;
-}
-
-h1 {
-  font-size: 35px;
 }
 
 .grid-container {
