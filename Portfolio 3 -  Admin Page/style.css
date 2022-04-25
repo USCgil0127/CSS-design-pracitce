@@ -56,6 +56,10 @@ header {
   cursor: pointer;
 }
 
+.for-md {
+  display: none;
+}
+
 .header-right {
   display: flex;
 }
@@ -259,4 +263,49 @@ main {
   grid-template-areas: "타이틀 타이틀 타이틀 타이틀 타이틀 타이틀 타이틀 타이틀" "카드1 카드1 카드2 카드2 카드3 카드3 카드4 카드4" "차트 차트 차트 차트 차트 테스크 테스크 테스크" "차트 차트 차트 차트 차트 빈공간 빈공간 빈공간";
 }
 
-/*# sourceMappingURL=style.css.map *//*# sourceMappingURL=style.css.map */
+@media screen and (max-width: 768px) {
+  header .search,
+header .header-right {
+    display: none;
+  }
+
+  .for-md {
+    display: block;
+    border: 2px solid lightgray;
+    padding: 5px 8px;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  nav {
+    grid-area: 나브;
+    position: static;
+    width: 5%;
+    height: 100vh;
+  }
+
+  nav:hover {
+    position: fixed;
+  }
+
+  header {
+    grid-area: 헤더;
+  }
+
+  .grid-container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 50px 150px 150px 150px 150px 400px 250px 100px;
+    grid-gap: 2%;
+    grid-template-areas: "타이틀 타이틀 타이틀 타이틀 타이틀 타이틀 타이틀 타이틀" "카드1 카드1 카드1 카드1 카드1 카드1 카드1 카드1 " "카드2 카드2 카드2 카드2 카드2 카드2 카드2 카드2 " "카드3 카드3 카드3 카드3 카드3 카드3 카드3 카드3 " "카드4 카드4 카드4 카드4 카드4 카드4 카드4 카드4 " "차트 차트 차트 차트 차트 차트 차트 차트 " "테스크 테스크 테스크 테스크 테스크 테스크 테스크 테스크 " "빈공간 빈공간 빈공간 빈공간 빈공간 빈공간 빈공간 빈공간 ";
+  }
+
+  .chart {
+    margin-top: 20px;
+  }
+
+  .tasks {
+    margin-top: 10px;
+  }
+}/*# sourceMappingURL=style.css.map */
