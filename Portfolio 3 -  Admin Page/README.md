@@ -118,8 +118,6 @@ labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
 
 -----------------------
 
-# 나의 시행착오
-
 # 나의 시행착오 및 새롭게 배운점
 
 - chart.js 사용법에 대해서 알게 됐다.
@@ -130,14 +128,7 @@ labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
   - 다양한 시도
     - 일단 각각의 박스들은 내부에 flex로 정렬되있다. 그리고 %로 일정량의 패딩과 마진이 넣어져있는 상황이었는데, 정확한 문제 파악을 위해 패딩과 마진을 0으로 만들고 사태 파악에 나섰다.
       - 아무래도, 패딩과 마진으로 내용물들의 위치를 잡는 것은 그 특정한 레이아웃에 한해서만 좋은 위치가 나오기 때문에, 1000px이나 1200px 같은 다른 레이아웃에서는 원하는 결과가 안 나오는 것같았다. 앞으로는 가능하면, 마진과 패딩을 사용을 최소화하고, flex를 이용해서 내용물들을 정렬해야겠다.
-      ```js
-
-    .card-itag {
- 	 display: flex;
-  	align-items: center;
-   	 }
-    ```
-    
+    ![](https://velog.velcdn.com/images/gil0127/post/c36fe9fc-09d2-4dcd-84ed-d51f879f49e1/image.PNG)
     ```js
 	  <div class="card-itag">
               <i class="fa-solid fa-dollar-sign card-right"></i>
@@ -154,5 +145,3 @@ labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
 ![](https://velog.velcdn.com/images/gil0127/post/d6c51cf9-07b0-4a2a-b547-ee882244a4e0/image.PNG)
   - 해결방안
     - 이 문제 역시도 상단의 4개의 card들 안의 i 태그를 정렬시켰던 방식과 동일하게 flex와 `align-items: center;`를 사용해서 해결할 수 있었다.
-
-
