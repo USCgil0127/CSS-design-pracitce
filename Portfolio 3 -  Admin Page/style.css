@@ -56,7 +56,7 @@ header {
   cursor: pointer;
 }
 
-.for-md {
+.outer-for-md {
   display: none;
 }
 
@@ -269,31 +269,47 @@ header .header-right {
     display: none;
   }
 
-  .for-md {
+  .outer-for-md {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
     display: block;
+    display: flex;
+    justify-content: right;
+    float: right;
+    width: 100%;
+    transform: translateX(-40px);
+  }
+
+  .for-md {
     border: 2px solid lightgray;
-    padding: 5px 8px;
+    padding: 5px 14px;
     font-size: 1.5rem;
     cursor: pointer;
   }
 
   nav {
     grid-area: 나브;
-    position: static;
-    width: 5%;
+    width: 8%;
+    padding-right: 1%;
     height: 100vh;
+    z-index: 1;
   }
 
   nav:hover {
-    position: fixed;
+    width: 20%;
   }
 
   header {
     grid-area: 헤더;
+    width: 100%;
+    float: left;
   }
 
   .grid-container {
+    transform: translateX(40px);
     height: 100%;
+    width: 90%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 50px 150px 150px 150px 150px 400px 250px 100px;
