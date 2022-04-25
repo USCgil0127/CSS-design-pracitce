@@ -123,7 +123,7 @@ labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
 
 - chart.js 사용법에 대해서 알게 됐다.
 
-1.  레이아웃 사이즈가 줄어들면서, Dashboard 밑의 4개의 박스 컨텐츠들의 내용물들이 점점 밑으로 내려갔다.
+#### 1.  레이아웃 사이즈가 줄어들면서, Dashboard 밑의 4개의 박스 컨텐츠들의 내용물들이 점점 밑으로 내려갔다.
 ![](https://velog.velcdn.com/images/gil0127/post/90bcd8b3-76e9-43b7-bbc5-0131c56a10bf/image.png)
 
   - 다양한 시도
@@ -138,13 +138,74 @@ labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
 	```
     => 이렇게 해서 세로로 가운데 정렬시키고, 반응형 레이아웃 테스트 해본 결과, 잘 됐다. 
   
-2. Dashboard를 구성하는 h1 영역이 밑의 박스들에 의해서 침범당하고 있다.
+#### 2. Dashboard를 구성하는 h1 영역이 밑의 박스들에 의해서 침범당하고 있다.
     - 다양한 시도 
       - 이 문제는 조금 당황스러운게, 맥북 크롬에서는 아무 문제가 발생하지 않는데, 윈도우 환경에서는 이런 문제가 발생한다.
       - 아무튼, 문제 해결을 위해 `margin: 0;`으로 주었다.
 
-3. Tasks들의 숫자들을 가운데 정렬시키고 싶은데, padding으로 가운데 정렬시키면, PC 사이즈 레이아웃에서도 숫자들의 위치가 다른 곳으로 밀려나간다.
+#### 3. Tasks들의 숫자들을 가운데 정렬시키고 싶은데, padding으로 가운데 정렬시키면, PC 사이즈 레이아웃에서도 숫자들의 위치가 다른 곳으로 밀려나간다.
 
 ![](https://velog.velcdn.com/images/gil0127/post/d6c51cf9-07b0-4a2a-b547-ee882244a4e0/image.PNG)
   - 해결방안
     - 이 문제 역시도 상단의 4개의 card들 안의 i 태그를 정렬시켰던 방식과 동일하게 flex와 `align-items: center;`를 사용해서 해결할 수 있었다.
+
+#### 4. 검색창 focus효과시, 늘어나는 문제
+
+![](https://velog.velcdn.com/images/gil0127/post/88fe10aa-6507-4a7e-a36e-7b4a480ac378/image.gif)
+
+ `transition: all 1s;` 속성을 줬는데도, 적용되지 않았다.
+   - 해결법
+   시작할 때, width값을 지정해줬더니 문제를 해결할 수 있었다.
+   시작할 때, width를 안 정해주면, 그냥 기본 사이즈로 돌아가는 줄 알았는데, 아무래도 지정을 반드시 해줘야하는 모양이다.
+```js
+.search input {
+  /* width: 50%; */ => 시작할 때, 너비를 적용해줘서 해결했다
+  transition: all 1s;
+  border-radius: 3px;
+}
+
+.search input:focus {
+  width: 100%;
+}
+
+```
+
+#### 5. 모바일 사이즈 레이아웃 변형시, 바 모양의 아이콘이 오른쪽 정렬되어야 하는데, 안 된다.
+
+![](https://velog.velcdn.com/images/gil0127/post/bb6b6588-6829-4d38-8545-d8f97cd5606c/image.PNG)
+
+   - `float:right;` 도 안 듣지를 않아서, `transform: translateX();`을 이용해서 강제로 오른쪽으로 밀어줘야 했다. 그러나, 레이아웃 크기가 700px 이하로 작아지면, 또다시 사이즈가 안 맞아서 좋은 방법이 아닌 것같다.
+   - 고심 끝에 다음과 같이 해결할 수 있었다.
+ - 해결법
+ 
+```js
+
+<div class="outer-for-md">
+          <div class="for-md">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+ </div>
+
+```
+
+for-md 클래스는 바 아이콘의 테두리를 만들어주기 위해서 존재한다.
+그 위에 outer-for-md를 만들어서, flex를 사용했다.
+
+```js
+
+ .outer-for-md{
+    appearance: none;
+    display: block;
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    transform: translateX(-7%);
+  }
+
+```
+`transform: translateX(-7%);`같은 경우는 너무 오른쪽으로 딱 달라붙기 때문에 적절한 거리 유지를 위해서 사용했다.
+
+이렇게 적용하면, 700px 이하의 작은 레이아웃에서도 바 아이콘의 위치가 원하는 곳에 그대로 있다.
+
+
+![](https://velog.velcdn.com/images/gil0127/post/24c9f08f-3512-4cd6-986b-135a976f2663/image.PNG)
