@@ -17,10 +17,51 @@ body {
 header {
   width: 96%;
   height: 8%;
-  border: 5px solid blue;
   float: right;
   background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 1%;
 }
+
+.search {
+  display: flex;
+  width: 30%;
+  height: 80%;
+}
+
+.search input {
+  width: 50%;
+  transition: all 1s;
+  border-radius: 3px;
+}
+
+.search input:focus {
+  width: 100%;
+}
+
+.search-itag {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  padding: 3%;
+  color: white;
+  border-radius: 3px;
+}
+
+.header-right {
+  display: flex;
+}
+
+.header-right > div,
+.header-right > p {
+  margin: 0px 10px;
+  color: gray;
+  font-size: 1.2rem;
+}
+
+// ///////////////////
 
 nav {
   float: left;
@@ -52,19 +93,12 @@ main {
   border-radius: 5%;
   background-color: white;
   display: flex;
-  /* justify-content: center; */
-  /* align-content: flex-end; */
-  /* padding-right: 3%; */
-  /* padding-left: 3%; */
   padding: 1% 5%;
   box-shadow: 2px 2px 2px 2px lightgray;
-  
 }
 
 .card-left {
   flex-grow: 3;
-  /* padding: 8% 7%; */
-  /* 이렇게 미니까 반응형 일시, 자꾸 밑으로 밀린다. */
 }
 
 .card-left > p {
@@ -81,16 +115,14 @@ main {
   flex-grow: 1;
   font-size: 3.1rem;
   color: gray;
-  /* padding: 16.2% 0%; */
 }
 
 .card1 {
   grid-area: 카드1;
 }
-.card-itag{
+.card-itag {
   display: flex;
   align-items: center;
-  /* justify-content: center; */
 }
 
 .card2 {
@@ -154,7 +186,7 @@ main {
 
 .task-number {
   background-color: blue;
-  border-radius: 20%;
+  border-radius: 30%;
   color: white;
   padding: 0% 3%;
   display: flex;
@@ -176,4 +208,4 @@ main {
   grid-template-rows: 7% 18.8% 34.1% 34.1%;
   grid-gap: 2%;
   grid-template-areas: "타이틀 타이틀 타이틀 타이틀 타이틀 타이틀 타이틀 타이틀" "카드1 카드1 카드2 카드2 카드3 카드3 카드4 카드4" "차트 차트 차트 차트 차트 테스크 테스크 테스크" "차트 차트 차트 차트 차트 빈공간 빈공간 빈공간";
-} 
+}
