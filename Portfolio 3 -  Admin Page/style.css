@@ -276,9 +276,8 @@ header .header-right {
     display: block;
     display: flex;
     justify-content: right;
-    float: right;
     width: 100%;
-    transform: translateX(-40px);
+    transform: translateX(-7%);
   }
 
   .for-md {
