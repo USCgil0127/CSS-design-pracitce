@@ -76,6 +76,25 @@ input의 type속성이 email인 요소만 찾아서 스타일을 줄 수 있습�
 
 그리고 물론 `<form>` 태그 안에 있어야 잘 작동합니다.
 
+### label 태그와 for 속성
+
+```js
+
+<input type="checkbox" id="subscribe">
+<label for="subscribe">누르기</label>
+
+```
+
+label과 for 속성을 적절히 활용하면,
+
+input대신 label을 눌러도 input을 선택할 수 있습니다.
+
+(input의 id, label의 for 속성을 똑같이 맞춰주면 됩니다)
+
+ 
+
+혹은 그냥 `<input>` 에 제목이 필요할 때도 h, p 태그 이런거 말고 <label> 태그를 가끔 이용합니다.
+
 ----------------
 
 ### 시행착오 및 배운점
