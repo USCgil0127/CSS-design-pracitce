@@ -209,3 +209,27 @@ for-md 클래스는 바 아이콘의 테두리를 만들어주기 위해서 존�
 
 
 ![](https://velog.velcdn.com/images/gil0127/post/24c9f08f-3512-4cd6-986b-135a976f2663/image.PNG)
+
+
+### 6. 검색창을 구현할 때, 버튼을 포함한 전체 검색창에 border-radius값을 줘야 했는데, 문제가 있었다.
+
+바로 hover 이후 검색창이 늘어나기 때문에, 보이지 않는 검색창 전체 부분까지 포함하면, border-radius 값은 왼쪽 위, 아래 부분만 적용된다.
+
+![](https://velog.velcdn.com/images/gil0127/post/5cef07ff-e571-4d73-921c-1de308953f1f/image.PNG)
+
+
+좀 더 자세한 설명은 [여기](https://www.codingfactory.net/10957)를 참고하자!! 정말 잘 나와있다.
+
+즉, 검색창 전체에 주는 것이 아닌 input 태그의 왼쪽 위,아래 부분적으로 그리고 버튼 태그에 오른쪽 위,아래에 border-radius를 주는 방식으로 해결할 수있었다.
+
+border-radius 는 세부적으로
+
+```js
+border-top-left-radius: 3px;
+border-top-right-radius: 3px;
+border-bottom-left-radius: 3px;
+border-bottom-right-radius: 3px;
+
+```
+라는 값으로 나눌 수 있다.
+
