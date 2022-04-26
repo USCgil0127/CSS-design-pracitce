@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: darkgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form-container {
+  background-color: white;
+  padding: 2% 5% 5% 5%;
+  border-radius: 5px;
+}
+
+#email {
+  width: 100%;
+}
+
+label {
+  display: block;
+  margin-bottom: 3px;
+}
+
+.name-container {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#firstname,
+#lastname {
+  width: 94%;
+}
+#lastname {
+  float: right;
+}
+
+#lname-move {
+  transform: translateX(6%);
+}
+
+.msg-container {
+  margin-top: 10px;
+}
+
+.msg-container textarea {
+  resize: none;
+  width: 100%;
+}
+
+.bottom {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.check-box {
+  display: flex;
+}
+
+.check-box label {
+  margin-left: 3px;
+}
