@@ -6,136 +6,253 @@ body {
   background-color: #f7f9fc;
 }
 
+.container {
+  margin-top: 50px;
+  /* width: 100%; */
+  /* height: 100%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 ul {
   list-style: none;
 }
 
+.top {
+  margin: auto;
+  border-radius: 10px;
+  padding: 20px;
+  width: 80%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction : column;  */
+}
+
+.img-box {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.profile {
+  flex-grow: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.profile h1 {
+  margin-bottom: 0;
+  padding-bottom: 0px;
+}
+
+.profile p {
+  margin: 0;
+}
+
+.profile i {
+  color: #6fbaf8;
+  margin: 10px 0px;
+}
+
+.profile button {
+  padding: 8px 28px;
+  color: white;
+  background-color: #6fbaf8;
+  border: none;
+  border-radius: 3px;
+}
+
+.empty {
+  flex-grow: 1;
+}
+
+.info-detail {
+  border-left: 5px solid #f7f9fc;
+  flex-grow: 1;
+}
+
+.info-detail p {
+  display: inline-block;
+}
+
+.info-detail p:nth-child(2) {
+  color: red;
+}
+
 li {
+  display: flex;
+}
+
+.second p {
+  width: 100%;
+}
+
+.second {
+  /* 여전히 해결 중임!! */
+  /* text-align: left; */
+  /* margin-left: auto; */
+  text-align: right;
+}
+
+/* ............... */
+
+.mid {
+  border-bottom: 3px solid lightgray;
+  width: 78%;
+  margin-top: 20px;
   margin-bottom: 10px;
 }
-.top3_innerbox {
-  margin: 30px;
-}
 
-.top {
-  background-color: white;
-  margin: 50px;
-  padding: 30px;
-}
-
-.top img {
-  margin-top: 24px;
-}
-
-.top1 .card {
-  height: 100%;
+.mid button {
   border: none;
-}
-
-.top1 .card-body {
-  margin-top: 14px;
-}
-
-.top1 .card-title {
-  margin-bottom: -1px;
-}
-.top1 .card-text {
-  margin-bottom: 3px;
-}
-
-.top1 button {
-  padding: 10px 30px;
-  margin-top: 5px;
-}
-
-.top3 {
-  border-left: solid 1px skyblue;
-  vertical-align: middle;
-  padding-left: 40px;
-}
-
-.hr {
-  padding-left: 60px;
-  padding-right: 60px;
-  margin-bottom: 12px;
-}
-
-.middle-btn {
-  padding-left: 30px;
-  padding-right: 30px;
-  font-size: 1.2rem;
-  color: skyblue;
-  margin-bottom: -19px;
-  text-align: right;
+  padding: 10px 15px;
+  font-size: 1rem;
   background-color: #f7f9fc;
-  border-style: none;
-  border-bottom: solid 5px skyblue;
-}
-
-.bottom {
-  margin-left: 52px;
-  margin-right: 52px;
-}
-
-.size1 {
-  /* padding-bottom: 3rem; */
-  height: 25rem;
-  padding: 20px;
-}
-
-.second-bottom-blank {
-  padding: 30px;
-}
-
-.second-card {
-  height: 36rem;
-}
-
-.third-card {
-  text-align: center;
-  padding: 30px;
-}
-
-.third-card i {
   color: #6fbaf8;
-  font-size: 8rem;
+  border-bottom: 3px solid #6fbaf8;
+  margin-bottom: -3px;
 }
-.third-card a {
-  margin-top: 5px;
-  background-color: #6fbaf8;
-  border-style: none;
-  padding: 10px 50px;
+
+/* ............. */
+
+.grid-work {
+  grid-area: w;
+  background-color: white;
+  border-radius: 10px;
+  /* border: 3px solid black; */
+  padding: 10%;
 }
-.third-btn-comment {
-  margin-top: 3px;
-  color: #6fbaf8;
+
+.grid-mid {
+  grid-area: m;
+  background-color: white;
+  border-radius: 10px;
+  /* border: 3px solid black; */
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  padding: 20px 30px;
+}
+
+.about {
+  flex-grow: 1;
+  border-bottom: 3px solid lightgray;
 }
 
 .skills {
-  padding-top: 5px;
-  padding-bottom: 10rem;
-  padding-left: 20px;
-  padding-right: 20px;
+  flex-grow: 1;
 }
 
-.skills .badge {
-  padding: 0.8rem;
-  border: solid 1px skyblue;
+.skill-list button {
+  background-color: white;
+  border-radius: 30px;
+  margin-right: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
-.pp-title {
-  margin-top: 1.5rem;
-  text-align: left;
+.grid-findme {
+  grid-area: f;
+  background-color: white;
+  border-radius: 10px;
+  /* border: 3px solid black; */
+  /* .......... */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.cards {
-  margin-bottom: -20px;
+.grid-findme i {
+  margin-top: 20px;
+  color: #6fbaf8;
+  font-size: 4rem;
 }
 
-.cards img {
-  margin-top: 10px;
+.findme-p {
+  font-size: 1.1rem;
 }
 
-.cards p.card-text {
-  margin-bottom: 0px;
+.findme-btn {
+  padding: 8px 28px;
+  color: white;
+  background-color: #6fbaf8;
+  border: none;
+  border-radius: 3px;
+  margin-bottom: -10px;
+}
+
+.findme-bot-p {
+  color: #6fbaf8;
+}
+
+/* ...... */
+
+.grid-people {
+  grid-area: p;
+  /* border: 3px solid black; */
+}
+
+.people-list{
+    border-top: 3px solid lightgray;
+}
+
+.list {
+  display: flex;
+  justify-content: left;
+  /* align-items: center; */
+  /* flex-direction: column ; */
+  /* height: 100px; */
+}
+
+.list img{
+    width: 80px;
+    height: 80px;
+}
+
+.listinfo{
+    height: 80px;
+    /* margin-top: ; */
+    padding-top: 8px;
+}
+
+.listinfo h4{
+    margin: 0;
+    padding: 0;
+}
+
+.listinfo p{
+    margin: 0;
+    padding: 0;
+    font-size: 0.9rem;
+}
+
+.listinfo i{
+    margin: 0;
+    padding: 0;
+    color: #6fbaf8;
+    font-size: 0.7rem;
+}
+
+
+/* ...... */
+
+.grid-container {
+  display: grid;
+  /* border: 3px solid black; */
+  margin-bottom: 200px;
+  height: 60vh;
+  width: 80%;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 25% 25% 25% 25%;
+  grid-gap: 10px;
+  grid-template-areas:
+    "w m m m f"
+    "w m m m f"
+    "w m m m p"
+    ". m m m p";
 }

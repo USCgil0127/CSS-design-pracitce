@@ -1,17 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
-    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
 
     <link
       rel="stylesheet"
@@ -20,232 +13,136 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
     <link rel="stylesheet" href="style.css" />
-
-    <title>portfolio - SNS profile</title>
   </head>
   <body>
     <div class="container">
-      <!-- container -->
+      <div class="top">
+        <!--  -->
+        <div class="profile" style="display: flex">
+          <div class="img-box">
+            <img src="/img/profile-pic.png" alt="" />
+          </div>
 
-      <div class="top row shadow">
-        <!-- top -->
-        <div class="top1 col-6">
-          <div class="card mb-3">
-            <div class="row g-0">
-              <div class="col-md-4">
-                <img
-                  src="/img/profile-pic.png"
-                  class="img-fluid rounded-start"
-                  alt="..."
-                />
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h5 class="card-title">Killian Sven</h5>
-                  <p class="card-text">Front-end Developer</p>
-                  <p class="card-text">
-                    <small class="text-muted">
-                      <i class="fa-solid fa-location-dot"></i> 서울
-                      마포구</small
-                    >
-                  </p>
-                  <button type="button" class="btn btn-primary" disabled>
-                    Contact
-                  </button>
-                </div>
-              </div>
+          <div class="info">
+            <h1>Killian Sven</h1>
+            <p>Front-end Designer</p>
+
+            <i class="fa-solid fa-location-dot"> 서울 마포구</i>
+            <div class="btn-box">
+              <button>Contact</button>
             </div>
           </div>
-
-          <!-- bottom end of top1 -->
         </div>
+        <!--  -->
+        <div class="empty"></div>
 
-        <!-- top2 -->
-        <div class="top2 col-2">
-          <!-- bottom end of top2 -->
+        <div class="info-detail">
+          <ul>
+            <li>
+              <p class="empty first">Location</p>
+              <div class="empty"></div>
+              <div class="empty second">
+                <p>서울 마포구</p>
+              </div>
+            </li>
+            <li>
+              <p class="empty first">Age</p>
+              <div class="empty"></div>
+              <div class="empty second">
+                <p>90년생</p>
+              </div>
+            </li>
+            <li>
+              <p class="empty first">Experience</p>
+              <div class="empty"></div>
+              <div class="empty second">
+                <p>신입</p>
+              </div>
+            </li>
+            <li>
+              <p class="empty first">School</p>
+              <div class="empty"></div>
+              <div class="empty second">
+                <p>천조국대 토목학과</p>
+              </div>
+            </li>
+          </ul>
         </div>
-
-        <!-- top3 -->
-        <div class="top3 col-4">
-          <div class="top3_innerbox">
-            <ul class="list-group list-group-horizontal row">
-              <li class="col-5">Location</li>
-              <!-- <li class="col-2"></li> -->
-              <li class="col-5">서울 마포구</li>
-            </ul>
-            <ul class="list-group list-group-horizontal row">
-              <li class="col-5">Age</li>
-              <!-- <li class="col-2"></li> -->
-              <li class="col-5">90년생</li>
-            </ul>
-            <ul class="list-group list-group-horizontal row">
-              <li class="col-5">Experience</li>
-              <!-- <li class="col-2"></li> -->
-              <li class="col-5">신입</li>
-            </ul>
-            <ul class="list-group list-group-horizontal row">
-              <li class="col-5">School</li>
-              <!-- <li class="col-2"></li> -->
-              <li class="col-6">천조국대 토목학과</li>
-            </ul>
-
-            <!-- bottom end of test -->
-          </div>
-
-          <!-- bottom end of top3 -->
-        </div>
-
-        <!-- bottm end of top -->
       </div>
 
-      <!-- hr -->
-      <div class="hr">
-        <button type="button" class="btn btn-primary middle-btn">
-          Profile
-        </button>
-        <hr />
+      <div class="mid">
+        <button>Profile</button>
       </div>
-      <!-- .... -->
 
-      <!-- bottom -->
-      <div class="bottom row">
-        <div class="bottom1 col-3">
-          <!-- bottom1 start -->
-          <div class="card size1 shadow">
-            <div class="card-body">
-              <h5 class="card-title">WORKS</h5>
-              <h6 class="card-subtitle mb-2 text-muted"></h6>
-              <br />
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-            </div>
-          </div>
+      <div class="grid-container">
+        <div class="grid-work">
 
-          <!-- bottom end of bottom1 -->
+          <h2>WORKS</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita odio, facere aliquam quas nam asperiores! </p>
+
         </div>
+        <div class="grid-mid">
 
-        <div class="bottom2 col-6">
-          <!-- bottom2 start -->
+          <div class="about">
 
-          <div class="card size1 second-card shadow">
-            <div class="card-body second-body">
-              <h5 class="card-title">ABOUT</h5>
-              <h6 class="card-subtitle mb-2 text-muted"></h6>
-              <br />
-              <p class="card-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Architecto error, quas voluptas doloribus optio laborum dicta,
-                vel iure doloremque praesentium nam sapiente ratione unde nulla
-                eaque ullam expedita voluptatem non.
-              </p>
-            </div>
-
-            <hr />
-
-            <!-- skills part -->
-            <div class="skills">
-              <h5 class="skills-title">SKILLS</h5>
-              <span class="badge rounded-pill text-dark">HTML</span>
-              <span class="badge rounded-pill text-dark">CSS</span>
-              <span class="badge rounded-pill text-dark">Javascript</span>
-              <span class="badge rounded-pill text-dark">Typescript</span>
-              <span class="badge rounded-pill text-dark">Photoshop</span>
-              <!-- end of skill -->
-            </div>
-
-            <div class="second-bottom-blank"></div>
-
-            <!-- end of second-card -->
+            <h2>ABOUT</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis dolor nostrum iure adipisci mollitia veniam, excepturi ex numquam suscipit, voluptate sed voluptas explicabo. Magni earum nobis tempore enim? Repellendus, reiciendis?</p>
           </div>
 
-          <!-- bottom end of bottom2 -->
+          <div class="skills">
+            <h2>SKILLS</h2>
+            <div class="skill-list">
+              <button>HTML5</button>
+              <button>JS</button>
+              <button>CSS3</button>
+              <button>Illustrator</button>
+              <button>Photoshop</button>
+            </div>
+          </div>
+
         </div>
+        <div class="grid-findme">
 
-        <div class="bottom3 col-3">
-          <!-- bottom3 start -->
-          <div class="card third-card shadow">
-            <i class="fa-solid fa-fire-flame-simple"></i>
-            <div class="card-body">
-              <p class="card-title">Find me at Linkedout.com</p>
-              <a href="#" class="btn btn-primary">Sign Up</a>
-              <p class="card-text third-btn-comment">Already a member?</p>
-            </div>
-          </div>
+          <i class="fa-solid fa-fire-flame-simple"></i>
+          <p class="findme-p">Find me at Linkedout.com</p>
+          <button class="findme-btn">Sign Up</button>
+          <p class="findme-bot-p">Already a member?</p>
+        </div>
+        <div class="grid-people">
 
-          <div class="people-might">
-            <!-- people-might start -->
-            <p class="pp-title">People You Might Know</p>
-            <hr />
-            <!-- ........ -->
-            <div class="cards">
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <img
-                    src="/img/profile-pic.png"
-                    class="img-fluid rounded-start"
-                    alt="..."
-                  />
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">Killian Sven</h5>
-                    <p class="card-text">Developer</p>
-                    <p class="card-text2">
-                      <small class="text-muted">
-                        <i class="fa-solid fa-location-dot"></i> 서울
-                        마포구</small
-                      >
-                    </p>
-                  </div>
-                </div>
+          <h4>People You Might Know</h4>
+
+          <div class="people-list">
+
+            <div class="list">
+
+              <img src="/img/profile-pic.png" alt="">
+              <div class="listinfo">
+                <h4>전라도 아귀</h4>
+                <p>Developer</p>
+                <i class="fa-solid fa-location-dot"> Seoul</i>
               </div>
-            </div>
-            <!-- ........ -->
 
-            <div class="cards">
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <img
-                    src="/img/profile-pic.png"
-                    class="img-fluid rounded-start"
-                    alt="..."
-                  />
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title">Killian Sven</h5>
-                    <p class="card-text">Developer</p>
-                    <p class="card-text2">
-                      <small class="text-muted">
-                        <i class="fa-solid fa-location-dot"></i> 서울
-                        마포구</small
-                      >
-                    </p>
-                  </div>
-                </div>
+            </div>
+
+            <div class="list">
+
+              <img src="/img/profile-pic.png" alt="">
+              <div class="listinfo">
+                <h4>경상도 짝귀</h4>
+                <p>Developer</p>
+                <i class="fa-solid fa-location-dot"> Seoul</i>
               </div>
+
             </div>
 
-            <!-- ......... -->
-
-            <!-- below end of pp-might -->
           </div>
 
-          <!-- below end of bottom3 -->
         </div>
-
-        <!-- bottom end of bottom -->
       </div>
-      <!-- bottom end of container -->
+
+      <!-- end of container -->
     </div>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-      crossorigin="anonymous"
-    ></script>
   </body>
 </html>
