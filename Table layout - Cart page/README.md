@@ -97,4 +97,15 @@ td로 변하길 원하는 요소엔 display : table-cell 을 넣어주면 됩니
 
 -----------------
 
+## 시행착오
+
+- div.container 박스 안에 모든 컨텐트를 담았는데, 사이즈 조정을 어떻게해야 할지 다소 난감했다. 특히, 테이블의 경우 사이즈 조절이 쉽지 않았는데, vh와 vw가 가장 쉬운 선택 같아서 % 대신 적용했다.
+
+- 이미지 내에 배경색을 없애기 위해서, `webp` 형식의 이미지 파일을 찾아서 적용했다. 참고로, 숙제를 줄 때, 요구사항에 맞는 이미지 파일을 따로 제공하지 않았다.
+
+- 표 중간 중간에 선을 만드는데, 
+![](https://velog.velcdn.com/images/gil0127/post/c7d0fb8e-ec2f-4c91-a83b-efa5a9f6edaf/image.PNG) 선 마다 위와 같이 공백이 조금씩 남았다.
+  - 패딩, 마진을 0을 줘봤지만, 소용이 없었다.
+  - `border-collapse: collapse;`를 `<table>`에 적용해서 문제를 해결했다.
+    - [border-collapse CSS 속성은 표 테두리(border)가 분리(separated) 또는 상쇄(collapsed)될 지를 결정합니다.](https://developer.mozilla.org/ko/docs/Web/CSS/border-collapse)
 
