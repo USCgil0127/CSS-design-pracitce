@@ -86,6 +86,10 @@ li {
   display: flex;
 }
 
+.first {
+  flex-grow: 1;
+}
+
 .second p {
   width: 100%;
 }
@@ -94,7 +98,8 @@ li {
   /* 여전히 해결 중임!! */
   /* text-align: left; */
   /* margin-left: auto; */
-  text-align: right;
+  /* text-align: right; */
+  flex-grow: 1;
 }
 
 /* ............... */
@@ -122,7 +127,6 @@ li {
   grid-area: w;
   background-color: white;
   border-radius: 10px;
-  /* border: 3px solid black; */
   padding: 10%;
 }
 
@@ -130,9 +134,7 @@ li {
   grid-area: m;
   background-color: white;
   border-radius: 10px;
-  /* border: 3px solid black; */
   display: flex;
-  /* justify-content: center; */
   flex-direction: column;
   padding: 20px 30px;
 }
@@ -159,7 +161,6 @@ li {
   grid-area: f;
   background-color: white;
   border-radius: 10px;
-  /* border: 3px solid black; */
   /* .......... */
   display: flex;
   justify-content: center;
@@ -194,11 +195,10 @@ li {
 
 .grid-people {
   grid-area: p;
-  /* border: 3px solid black; */
 }
 
-.people-list{
-    border-top: 3px solid lightgray;
+.people-list {
+  border-top: 3px solid lightgray;
 }
 
 .list {
@@ -209,41 +209,38 @@ li {
   /* height: 100px; */
 }
 
-.list img{
-    width: 80px;
-    height: 80px;
+.list img {
+  width: 80px;
+  height: 80px;
 }
 
-.listinfo{
-    height: 80px;
-    /* margin-top: ; */
-    padding-top: 8px;
+.listinfo {
+  height: 80px;
+  padding-top: 8px;
 }
 
-.listinfo h4{
-    margin: 0;
-    padding: 0;
+.listinfo h4 {
+  margin: 0;
+  padding: 0;
 }
 
-.listinfo p{
-    margin: 0;
-    padding: 0;
-    font-size: 0.9rem;
+.listinfo p {
+  margin: 0;
+  padding: 0;
+  font-size: 0.9rem;
 }
 
-.listinfo i{
-    margin: 0;
-    padding: 0;
-    color: #6fbaf8;
-    font-size: 0.7rem;
+.listinfo i {
+  margin: 0;
+  padding: 0;
+  color: #6fbaf8;
+  font-size: 0.7rem;
 }
-
 
 /* ...... */
 
 .grid-container {
   display: grid;
-  /* border: 3px solid black; */
   margin-bottom: 200px;
   height: 60vh;
   width: 80%;
@@ -255,4 +252,55 @@ li {
     "w m m m f"
     "w m m m p"
     ". m m m p";
+}
+
+/* .......... */
+
+@media screen and (max-width: 768px) {
+  .top {
+    flex-direction: column;
+  }
+
+  .profile{
+    margin-right: auto;
+  }
+
+  .empty,
+  .grid-people {
+    display: none;
+  }
+
+  .info-detail {
+    border: none;
+    width: 100%;
+  }
+
+  .info-detail ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .grid-work {
+    padding: 5%;
+  }
+
+  .grid-container {
+    display: grid;
+    height: 1200px;
+    width: 80%;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 300px 300px 300px 300px;
+    grid-gap: 20px;
+    grid-template-areas:
+      "w w w w w"
+      "m m m m m"
+      "m m m m m"
+      "f f f f f";
+  }
+
+  .skill-list button {
+    padding: 10px 18px;
+    font-size: 1rem;
+  }
 }
