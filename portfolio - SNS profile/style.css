@@ -88,6 +88,7 @@ li {
 
 .first {
   flex-grow: 1;
+  flex-basis: 0;
 }
 
 .second p {
@@ -95,10 +96,8 @@ li {
 }
 
 .second {
-  /* 여전히 해결 중임!! */
-  /* text-align: left; */
-  /* margin-left: auto; */
-  /* text-align: right; */
+  text-align: left;
+  flex-basis: 0;
   flex-grow: 1;
 }
 
