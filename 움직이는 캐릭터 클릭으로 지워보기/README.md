@@ -1,6 +1,7 @@
 ## 완성본
 
-![](https://velog.velcdn.com/images/gil0127/post/2043ecd5-5abe-4a64-9304-78ba8c57b059/image.gif)
+![](https://velog.velcdn.com/images/gil0127/post/2fb0f411-b61a-4a9d-b151-9df96cbf97a8/image.gif)
+
 
 움직이는 캐릭터들을 클릭하면, 사라지게 하는 페이지를 만들어보았다.
 
