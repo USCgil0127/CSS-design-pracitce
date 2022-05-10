@@ -47,6 +47,27 @@ script에서 img 태그는 클릭 이벤트를 안 받고 싶다면,
 
 `pointer-events: none;`  을 넣어주면 된다.
 
+#### `pointer-events: none;` 사용시, 주의사항
+
+```css
+.btn{
+    pointer-events: none;
+}
+
+```
+
+
+```js
+<div class="btn">
+          <img src="/images/ilbuni_1.png" alt="" class="three" />
+          <span>일분이 3</span>
+</div>
+
+```
+
+이렇게 div.btn에 `pointer-events: none;`를 주게 되면, 그 하위 태그들도 동일한 영향을 받아서 target으로 잡을 수 없다.
+
+
 ### data-value와 dataset 사용법
 
 ```js
