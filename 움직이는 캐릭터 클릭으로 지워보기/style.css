@@ -25,10 +25,10 @@ body {
 }
 
 img {
-    /* display: block; */
+  /* display: block; */
   animation-name: 움찔움찔;
   animation-duration: 7s;
   animation-timing-function: linear;
-  animation-delay: 1s;
   animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
