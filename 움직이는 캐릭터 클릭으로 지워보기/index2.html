@@ -9,26 +9,42 @@
   </head>
   <body>
     <div class="container">
-      <img src="/images/ilbuni_0.png" alt="" />
+      <img src="/images/ilbuni_0.png" alt="" class="one" />
 
-      <img src="/images/ilbuni_1.png" alt="" />
+      <img src="/images/ilbuni_1.png" alt="" class="two" />
 
-      <img src="/images/ilbuni_2.png" alt="" />
+      <img src="/images/ilbuni_2.png" alt="" class="three" />
 
-      <img src="/images/ilbuni_3.png" alt="" />
+      <img src="/images/ilbuni_3.png" alt="" class="four" />
     </div>
   </body>
 
   <script>
-    (function () {
-      const tg = document.querySelectorAll("img");
+    // (function () {
+    //   const tg = document.querySelectorAll("img");
 
-      for (let i = 0; i < tg.length; i++) {
-        tg[i].addEventListener("click", function () {
-        //   this.style.display = "none";
-          this.style.visibility = "hidden";
-        });
-      }
+    //   for (let i = 0; i < tg.length; i++) {
+    //     tg[i].addEventListener("click", function () {
+    //     //   this.style.display = "none";
+    //       this.style.visibility = "hidden";
+    //     });
+    //   }
+    // })();
+
+    // 이벤트 위임으로 리펙토링 해봄
+    // 이미지가 천개가 될 때, 일일히 쿼리 셀렉터를 달아주는 것은 페이지 느려지는 원인이 된다.
+    // 그런 상황을 방지하고자 이벤트 위임을 써서, 동일한 기능을 심플하게 구현했다.
+
+    (function () {
+      const stage = document.querySelector(".container");
+
+      stage.addEventListener("click", function (el) {
+        const man = el.target.closest("img");
+        if (!man) return;
+
+        man.style.visibility = "hidden";
+
+      });
     })();
   </script>
 </html>
