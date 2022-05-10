@@ -1,0 +1,34 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  background-color: yellow;
+  width: 100vw;
+  height: 100vh;
+}
+
+@keyframes 움찔움찔 {
+  0% {
+    transform: translateX(0px); /* 애니메이션이 0%만큼 동작시 */
+  }
+  50% {
+    transform: translateX(500px);
+  }
+  100% {
+    transform: translateX(1000px); /* 애니메이션이 100%만큼 동작시 */
+  }
+}
+
+img {
+    /* display: block; */
+  animation-name: 움찔움찔;
+  animation-duration: 7s;
+  animation-timing-function: linear;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+}
