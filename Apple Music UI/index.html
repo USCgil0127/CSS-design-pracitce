@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>애플 뮤직 스크롤 이벤트 구현하기</title>
+    <link rel="stylesheet" href="/css reset/reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .card-box img {
+        display: block;
+        margin: auto;
+        max-width: 80%;
+      }
+
+      .card-box {
+        position: sticky;
+        top: 400px;
+        margin-top: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card-background">
+      <div class="card-box">
+        <img src="img/card1.png" alt="" />
+      </div>
+
+      <div class="card-box">
+        <img src="img/card2.png" alt="" />
+      </div>
+
+      <div class="card-box">
+        <img src="img/card3.png" alt="" />
+      </div>
+      <!-- end of card-background -->
+    </div>
+
+    <script>
+      window.addEventListener("scroll", function () {
+        console.log(window.scrollY);
+
+        let h = window.scrollY;
+
+        let y = (-1 / 200) * h + 5 / 2;
+        let y2 = (-1/15)*h + (1800/15);
+
+        let card = document.querySelectorAll(".card-box");
+
+        card[0].style.opacity = y;
+
+        // 왜 얘가 존재하면, 다음번 카드 opacity 기능이 실행되지 않습니다.
+        // card[0].style.width = `${y2}%`;
+
+        card[1].style.opacity =  (-1 / 264) * h + 1264 / 264;
+
+       
+      });
+    </script>
+  </body>
+</html>
