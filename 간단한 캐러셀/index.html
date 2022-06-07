@@ -9,6 +9,10 @@
     <style>
       .slide-container {
         width: 300vw;
+        /* transition: all 1s; */
+      }
+
+      .smooth{
         transition: all 1s;
       }
 
@@ -18,16 +22,17 @@
       }
 
       .slide-box img {
-        width: 100%;
+        width: 1000px;
+        height: 500px;
       }
     </style>
   </head>
   <body>
     <div style="overflow: hidden">
       <div class="slide-container">
-        <div class="slide-box"><img src="/img/car1.png" alt="" /></div>
-        <div class="slide-box"><img src="/img/car2.png" alt="" /></div>
-        <div class="slide-box"><img src="/img/car3.png" alt="" /></div>
+        <div class="slide-box"><img src="/img/car1.png" draggable="false" /></div>
+        <div class="slide-box"><img src="/img/car2.png"  draggable="false" /></div>
+        <div class="slide-box"><img src="/img/car3.png"  draggable="false" /></div>
       </div>
     </div>
 
